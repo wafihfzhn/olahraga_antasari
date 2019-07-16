@@ -1,0 +1,290 @@
+html{
+  margin: 0;
+}
+
+body {
+  background: white;
+  font-family: 'Quicksand', sans-serif;
+  margin-top: 80px;
+}
+
+.containers {
+  width: 100%;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+header {
+  background: MidnightBlue;
+  color: #EBEBD3;
+  padding: 10px 0 10px;
+  position: relative;
+  padding-bottom: 16px;
+  padding-top: 16px;
+}
+
+header::after {
+  clear: both;
+  display: block;
+}
+
+.site-nav {
+  position: absolute;
+  top: 100%;
+  right: 0%;
+  background: #464655;
+  height: 0px;
+  overflow: hidden;
+}
+
+.site-nav--open {
+  height: auto;
+}
+
+.site-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav li {
+  border-bottom: 1px solid #575766;
+}
+
+.site-nav li:last-child {
+  border-bottom: none;
+}
+
+td a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+}
+
+td a:hover,td a:focus {
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.site-nav a {
+  color: #EBEBD3;
+  display: block;
+  padding: 1em 4em 1em 4em;
+  text-transform: uppercase;
+  text-decoration: none;
+  text-align: center;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+  background: #E4B363;
+  color: #999;
+}
+
+.menu-toggle {
+  padding: 1em;
+  position: absolute;
+  top: 1.8em;
+  right: 0em;
+  cursor: pointer;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  content: '';
+  display: block;
+  background: #EBEBD3;
+  height: 3px;
+  width: 1.75em;
+  border-radius: 3px;
+  transition: all ease-in-out 500ms;
+}
+
+.hamburger::before {
+  transform: translateY(-6px);
+}
+
+.hamburger::after {
+  transform: translateY(3px);
+}
+
+.open .hamburger {
+  transform: rotate(45deg);
+}
+
+.open .hamburger::before {
+  opacity: 0;
+}
+
+.open .hamburger::after {
+  transform: translateY(-3px) rotate(-90deg);
+}
+
+.jumbotron {
+  background-image: url(../img/back.png);
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: 0 -40px;
+  text-transform: uppercase;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 20px rgba(0,0,0,0.8);
+}
+
+.jumbotron h3 {
+  padding-top: 0px;
+}
+
+.tentang {
+  background-color: MidnightBlue;
+  color: white;
+  margin-top: -32px;
+  padding-top: 16px;
+  padding-bottom: 26px;
+}
+
+.berita {
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.pengurus {
+  background-color: MidnightBlue;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 30px;
+}
+
+.pengurus  img {
+  border: 3px solid white;
+  width: 125px;
+  box-shadow: 1px 1px 40px rgba(0, 40, 40, 1);
+}
+
+.kontak {
+  padding-top: 10px;
+  padding-bottom: 30px;
+  color: white;
+  background-color: #666;
+}
+
+.kontak img {
+  padding-top: 20px;
+}
+
+.samping {
+  padding-top: 25px;
+}
+
+.samping a {
+  text-decoration: none;
+  color: white;
+}
+
+.samping a:hover {
+  color: #999;
+}
+
+.putih {
+  width: 200px;
+  border-top: 2px solid white;
+}
+
+.hitam {
+  width: 200px;
+  border-top: 2px solid #444;
+}
+
+footer {
+  position: relative;
+  bottom: 0;
+  width: auto;
+  height: 100px;
+  background-color: #222;
+  color: white;
+  font-size: 0.98em;
+}
+
+footer p {
+  padding-top: 40px
+}
+
+@media (min-width: 1000px) {
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .site-nav {
+    height: auto;
+    position: relative;
+    background: transparent;
+    float: right;
+    clip-path: initial;
+  }
+
+  .site-nav li {
+    display: inline-block;
+    border: none;
+  }
+
+  .site-nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    padding-right: 3.5em;
+  }
+
+  .site-nav a {
+    padding: 0;
+    padding-top: 16px;
+    padding-right: 30px;
+  }
+
+  .site-nav a:hover,
+  .site-nav a:focus {
+  background: transparent;
+  }
+
+  .site-nav--icon {
+    display: none;
+  }
+
+  .logo {
+    padding-left: 100px;
+  }
+}
+
+@media (max-width: 780px) {
+  .tulisan {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 900px) {
+
+  header {
+    padding-left: 2em;
+  }
+
+  .jumbotron {
+    background-position: center;
+  }
+
+}
+
+@media (max-width: 450px) {
+  .jumbotron h3 {
+    font-size: 16px;
+  }
+
+  .jumbotron h1 {
+    font-size: 30px;
+  }
+
+  .jumbotron h2 {
+    font-size: 17px;
+  }
+}
